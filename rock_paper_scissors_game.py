@@ -19,7 +19,7 @@ if type_of_game == "1":
     else:
         print("wrong number")
 
-    computer_choice = random.randint(1,3)
+    computer_choice = str(random.randint(1,3))
     if computer_choice == "1":
         print ('Computer chose Rock')
     elif computer_choice == "2":
@@ -53,12 +53,16 @@ elif type_of_game == "2":
     x = first_player_choice
     y = second_player_choice
     
+
 if x == y:
     print('draw')
-elif (x == 1 and y == 3) or (x == 2 and y == 1) or (x == 3 and y == 2):
-    print('player one win!')
+elif (x == '1' and y == '3') or (x == '2' and y == '1') or (x == '3' and y == '2'):
+    print('Player one win!')
 else:
-    print('Player two win!')
+    if type_of_game == "1":
+        print('Computer win!')
+    else:
+        print('Player two win!')
 
 
 
